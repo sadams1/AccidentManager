@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout style="@style/TitleBar">
+        <ImageView style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_logo" />
+
+        <View style="@style/TitleBarSpring" />
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:id="@+id/btn_title_refresh"
+            android:contentDescription="@string/description_refresh"
+            android:src="@drawable/ic_title_refresh"
+            android:onClick="onActionBarButtonClick" />
+        <ProgressBar style="@style/TitleBarProgressIndicator"
+            android:id="@+id/title_refresh_progress"
+            android:visibility="gone" />
+
+        
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_title_map"
+            android:onClick="onFlashlightClick" /><!--
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_menu_camera_view"
+            android:onClick="onCameraButtonClick" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_title_search"
+            android:onClick="onActionBarButtonClick" />
+            
+            
+    --></LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/action_one_button"
+                style="@style/HomeButton"
+                android:onClick="onActionOneClick"
+                android:text="@string/vehicles_involved"
+                android:drawableTop="@drawable/dashboard_button_selector"/>
+                
+            <Button android:id="@+id/action_two_button"
+                style="@style/HomeButton"
+                android:onClick="onActionTwoClick"
+                android:text="@string/witnesses"
+                android:drawableTop="@drawable/dashboard_button_selector"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/action_three_button"
+                style="@style/HomeButton"
+                android:onClick="onActionThreeClick"
+                android:text="@string/police_officers"
+                android:drawableTop="@drawable/dashboard_button_selector"/>
+            <Button android:id="@+id/action_four_button"
+                style="@style/HomeButton"
+                android:onClick="onPeopleInvolvedClick"
+                android:text="@string/people_involved"
+                android:drawableTop="@drawable/dashboard_button_selector"/>
+        </LinearLayout>
+
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/now_playing_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/now_playing_height"
+        android:orientation="horizontal"
+        android:background="#eee"
+        android:gravity="center">
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="6dip"
+            android:indeterminate="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/add_new_dashboard_helper"/>
+    </LinearLayout>
+</LinearLayout>
+

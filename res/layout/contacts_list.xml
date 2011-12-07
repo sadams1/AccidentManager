@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout style="@style/TitleBar">
+        <ImageView style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_logo" />
+
+        <View style="@style/TitleBarSpring" />
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:id="@+id/btn_title_refresh"
+            android:contentDescription="@string/description_refresh"
+            android:src="@drawable/ic_title_refresh"
+            android:onClick="onActionBarButtonClick" />
+        <ProgressBar style="@style/TitleBarProgressIndicator"
+            android:id="@+id/title_refresh_progress"
+            android:visibility="gone" />
+
+        
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_title_map"
+            android:onClick="onFlashlightClick" /><!--
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_menu_camera_view"
+            android:onClick="onCameraButtonClick" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_title_search"
+            android:onClick="onActionBarButtonClick" />
+            
+            
+    --></LinearLayout>
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent">
+		    <ListView 
+		    	android:id="@+id/android:list"
+		        android:layout_width="wrap_content"
+		       	android:layout_height="wrap_content"/>
+		  	<TextView 
+		  		android:id="@+id/android:empty"
+		        android:layout_width="wrap_content"
+		      	android:layout_height="wrap_content"
+		       	android:text="@string/no_contacts"/>
+		    <Button 
+		    	android:id="@+id/add_button" 
+				android:text="@string/add_button"
+				android:layout_width="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_height="wrap_content" />
+			<Button 
+		    	android:id="@+id/done_button" 
+				android:text="@string/done_button"
+				android:layout_width="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_toRightOf="@id/add_button"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</LinearLayout>
